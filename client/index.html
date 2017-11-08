@@ -10,9 +10,11 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,maximum-scale=1">
     <title>Amazon Coupon</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
-    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+      <!-- Google Fonts -->
+	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato' type='text/css' media='all' />
+	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans' type='text/css' media='all' />
     <link rel="stylesheet" type="text/css" src="client/stylesheets/less/app.css">
+    <link rel="stylesheet" type="text/css" src="client/stylesheets/less/bootstrap.css">
     <link rel="stylesheet" type="text/css" src="client/stylesheets/please-wait/please-wait.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
@@ -21,13 +23,8 @@
     }
     </style>
 </head>
-<body ng-app="taskManager" class="ng-cloak">
-    <div layout="row" layout-wrap class="md-primary">
-      <div class="app-header-fixed" flex="100">
-        <!-- <navbar class="app-header visible" ng-if="$root.userLoggedIn" ng-cloak></navbar>-->
-        <navbar class="app-header visible" ng-cloak></navbar>
-        <md-progress-linear ng-if="loading" md-mode="indeterminate" class="md-primary md-hue-1"></md-progress-linear>
-      </div>
+<body ng-app="couponClicks" class="ng-cloak">
+    <div layout="row" layout-wrap class="md-primary">      
       <div flex="100" class="fluids">
         <div ui-view class="anim-in-out anim-swap" data-anim-speed="300" ng-cloak></div>
       </div>

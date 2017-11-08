@@ -105,7 +105,7 @@ Meteor.methods({
           }
         ]}, 
         headers : {
-          "Authorization" : "Bearer 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"
+          "Authorization" : "Bearer "
         }
     }, function (error, response){
         if(error){

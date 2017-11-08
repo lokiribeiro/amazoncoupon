@@ -6,7 +6,7 @@ import Codes from '/imports/models/codes.js';
 
 class CouponcodesCtrl{
 
-  constructor($scope, $timeout, $mdSidenav, $element, $log, $mdDialog, $state, $q, $mdToast, $rootScope){
+  constructor($scope, $timeout, $mdSidenav, $element, $log, $mdDialog, $state, $q, $mdToast, $rootScope, $http){
       'ngInject';
 
       $scope.taskID = null;
@@ -52,6 +52,12 @@ class CouponcodesCtrl{
           console.info('tasks', lists);
           var proNum = lists.count();
           console.info('pronum', proNum);
+          var url = "//freegeoip.net/json/";
+          $http.get(url).then(function(response) {
+            console.log(response.data.ip);
+            $scope.ip = response.data.ip;
+          });
+          console.info('ip address', $scope.ip);
           return lists;
         },
         totalLists(){            

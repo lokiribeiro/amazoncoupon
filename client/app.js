@@ -13,7 +13,7 @@ import 'angularjs-social-login';
 import mdDataTable from 'angular-material-data-table';
 import ngFileUpload from 'ng-file-upload';
 
-export var app = angular.module('taskManager',
+export var app = angular.module('couponClicks',
     [angularMeteor, ngMaterial, uiRouter, 'accounts.ui', ngAnimate, 'anim-in-out', 'socialLogin', mdDataTable, ngFileUpload]).value('THROTTLE_MILLISECONDS', 250);
 
 app.config(function ($locationProvider, $urlRouterProvider, $stateProvider, $mdThemingProvider, $mdIconProvider, $provide, socialProvider) {
